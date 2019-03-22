@@ -1,6 +1,6 @@
 {
   "name": "number_to_roman_number",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Module that converts Roman numerals into numbers and vice versa.",
   "main": "index.js",
   "scripts": {
