@@ -1,6 +1,10 @@
 module.exports = new class RomanNumber{
+   
+    constructor() {  
+    }
 
-    toNumber(str){
+    toInt(str){
+
         const mapRomans = new Map([
             ['I', 1],
             ['V', 5],
@@ -10,7 +14,7 @@ module.exports = new class RomanNumber{
             ['D', 500],
             ['M', 1000]
         ]); 
-         
+
         let result = 0;
         let current =0 
         let previous = 0;
@@ -25,5 +29,20 @@ module.exports = new class RomanNumber{
         }
         return result;
     }
+
+
+    toRoman(num) {  
+        var result = '';
+        var decimal = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+        var roman = ["M", "CM","D","CD","C", "XC", "L", "XL", "X","IX","V","IV","I"];
+        for (var i = 0;i<=decimal.length;i++) {
+          while (num%decimal[i] < num) {     
+            result += roman[i];
+            num -= decimal[i];
+          }
+        }
+        return result;
+      }
+
 
    }
