@@ -1,22 +1,29 @@
-const quotes = [
-    "En esta isla vivió, durante cuatro largos años, Robinson Crusoe, cuya historia no solamente fascinó y emocionó al mundo entero sino que puso en el mapa del mundo a esta isla en la cual viven ochocientas chilenas y chilenos.",
-    "Y durante nuestro Gobierno, vamos a entregar cinco nuevos ‘tiatros’ regionales en Iquique, La Serena, ‘Rancuagua’, Concepción y Punta Arenas.",
-    "Si usted maneja, no conduce.",
-    "Nunca han mirado las estrellas, la galactea o el fondo del alma? Una cosa es mirar e intentar descubrir y otra cosa ver que es lo sensorial",
-    "Marepoto",
-    "Tusunami",
-    "Es la misma bandera con que hemos ‘cubrido’ tantas veces los féretros de nuestros ‘mártis’",
-    "Ha llegado el fin de año, tiempo en que nos preguntamos, qué hicimos bien, qué hicimos mal, qué ‘podimos’ haber hecho mejor"
-  ];
-  
-  /**
-   * Gets a random Quote
-   * @returns {string}
-   */
-  function randomQuote() {
-    return quotes[Math.floor(Math.random() * quotes.length)];
-  }
-  
-  module.exports = {
-    randomQuote
-  };
+module.exports = new class RomanNumber{
+
+    toNumber(str){
+        const mapRomans = new Map([
+            ['I', 1],
+            ['V', 5],
+            ['X', 10],
+            ['L', 50],
+            ['C', 100],
+            ['D', 500],
+            ['M', 1000]
+        ]); 
+         
+        let result = 0;
+        let current =0 
+        let previous = 0;
+
+        for (var i = 0; i < str.length; i++) {
+            current = mapRomans.get(str.charAt(i));
+            result += current;
+            if(current>previous){
+                result+= -(previous)*2
+            }
+          previous = current;
+        }
+        return result;
+    }
+
+   }
