@@ -1,0 +1,19 @@
+{
+  "name": "number_to_roman_number",
+  "version": "0.0.1",
+  "description": "Module that converts Roman numerals into numbers and vice versa.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedelriomarron/number_to_roman_number.git"
+  },
+  "author": "Pedro del Rio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pedelriomarron/number_to_roman_number/issues"
+  },
+  "homepage": "https://github.com/pedelriomarron/number_to_roman_number#readme"
+}
