@@ -1,11 +1,15 @@
 {
   "name": "number_to_roman_number",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Module that converts Roman numerals into numbers and vice versa.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "Roman number",
+    "Numero Romano"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pedelriomarron/number_to_roman_number.git"
